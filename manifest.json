@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Glovo Item Blacklist",
+  "version": "1.6",
+  "description": "Removes blacklisted items from Glovo web app.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.glovoapp.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
